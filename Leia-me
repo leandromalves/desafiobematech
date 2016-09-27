@@ -1,0 +1,61 @@
+DESCRIÇÃO:
+API para envio de Avaliações de um Hotel.
+Usuário pode enviar um comentário e uma lista de Caracteristicas com suas notas.
+
+Exemplo de Avaliação: 
+Comentário: "Hotel excelente para descansar e com bom atendimento"
+Notas de Caracteristicas: 
+Limpeza: Bom;
+Atendimento: Ótimo;
+Conforto: Regular;
+
+ACESSO:
+Para acessar a API Rest é necessário antes criar um usuário para autenticação através do formulário na URL raíz. Exemplo:
+http://localhost:8080/
+
+Utilizando este username e password será possível acessar a API. 
+
+O Schema do Banco de Dados Mysql é de nome "desafio".
+-----------------------------------------------------------------------------
+Adicionar Avaliação:
+URL POST: http://localhost:8080/avaliacao/
+Content-Type  :  application/json
+
+{
+"comentario":"Hotel excelente para descansar e com bom atendimento",
+   "notasCaracteriscas": [{
+    "caracteristica":{"nome":"Conforto"},
+    "nota":"Bom"
+  }]
+}
+
+-----------------------------------------------------------------------------
+Listar Todas Avaliações: 
+
+Url GET: http://localhost:8080/avaliacao
+
+-----------------------------------------------------------------------------
+Consultar uma Avaliação:
+Url GET: http://localhost:8080/avaliacao/{idDaAvaliacao}
+
+----------------------------------------------------------------------------
+Alterar uma Solicitação:
+Url PUT: http://localhost:8080/avaliacao/{idDaAvaliacao}
+Content-Type  :  application/json
+
+{
+   "notasCaracteriscas": [
+    {
+      "caracteristica": {
+        "id": 1,
+        "nome": "Conforto"
+      },
+      "nota": "Regular"
+    }
+  ],
+  "comentario": "Hotel excelente para descansar, limpo e com bom atendimento"
+}
+
+------------------------------------------------------------------------------
+Deletar uma Avaliação:
+Url DELETE: http://localhost:8080/avaliacao/{idDaAvaliacao}
