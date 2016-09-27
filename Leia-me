@@ -13,7 +13,7 @@ ACESSO:
 Para acessar a API Rest é necessário antes criar um usuário para autenticação através do formulário na URL raíz. Exemplo:
 http://localhost:8080/
 
-Utilizando este username e password será possível acessar a API. 
+Utilizando este username e password será possível acessar a API Rest. 
 
 As Configurações do Banco de Dados Mysql estão no arquivo "application.properties" em desafio/src/main/resources.
 -----------------------------------------------------------------------------
