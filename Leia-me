@@ -15,7 +15,7 @@ http://localhost:8080/
 
 Utilizando este username e password será possível acessar a API. 
 
-O Schema do Banco de Dados Mysql é de nome "desafio".
+As Configurações do Banco de Dados Mysql estão no arquivo "application.properties" em desafio/src/main/resources.
 -----------------------------------------------------------------------------
 Adicionar Avaliação:
 URL POST: http://localhost:8080/avaliacao/
